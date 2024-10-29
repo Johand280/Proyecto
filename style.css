@@ -1,0 +1,115 @@
+h1 {
+   font-family: 'Times New Roman', Times, serif;
+    color: rgb(105, 32, 174);
+    
+}
+
+.title{
+    color:rgb(105 32 174);
+    font-style:normal;
+    font-size: medium;
+    
+}
+header{
+    background-color:#fff;
+    color:rgb(105 32 174);
+   font-style:inherit;
+}
+.enlaces{
+    display: none;
+}
+.menu{
+    font-variant-emoji:face ;
+}
+.banner {
+    margin-top: 50px !important;
+  }
+  
+  .banner__title {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .banner__image {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner__image img {
+    width: 50%;
+    height: 29rem;
+    object-fit: cover;
+    border-radius: 27%;
+   }
+  .banner__subtitle {
+    color: currentcolor;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    padding-inline: 10px;
+    margin-top: 20px;
+  }
+  
+  .banner__button {
+    box-shadow: 0px -2px 20px 1px rgba(0,0,0,0.25);
+    border: none;
+    outline: none;
+    background-color: #000;
+    border: 2px solid #000;
+    color: #FFF;
+    border-radius: 8px;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .banner__button a {
+    color: #FFF;
+    transition: 0.3s;
+  }
+  
+  .banner__button a:hover {
+    color: #000;
+  }
+  
+  .banner__button:hover {
+    background-color: #FFF;
+    color: #000;
+  }
+  
+  .banner__container-button {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media screen and (width <= 800px) {
+    .banner__title {
+      font-size: 35px;
+      text-align: center;
+    }
+  
+    .banner {
+      gap: 30px;
+    }
+      .banner__image img {
+          width: 51%;
+          height: auto;
+      }
+  }
+  
+    .banner__image {
+      padding: 0;
+    }
+    
+    .banner__subtitle {
+      width: 100%;
+    }
+    body{
+      background-color:#48ffe41a;
+    }
