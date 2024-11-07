@@ -102,6 +102,10 @@ header{
           height: auto;
       }
   }
+  .carrusel{
+    height: fit-content;
+    width: fit-content;
+  }
   
     .banner__image {
       padding: 0;
