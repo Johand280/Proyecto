@@ -15,31 +15,29 @@ header{
     background-color:#fff;
     color:rgb(105 32 174);
    font-style:inherit;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 4px;
 }
 .enlaces{
     display: none;
 }
-.menu{
-    font-variant-emoji:face ;
-}
-.banner {
-    margin-top: 50px !important;
-  }
-  
+@font-face{
   .banner__title {
     font-size: 70px;
     text-align: center;
     margin-bottom: 60px;
   }
   
-  .banner__image {
+  .banner_image {
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .banner__image img {
+  img.banner_image{
     width: 50%;
     height: 29rem;
     object-fit: cover;
@@ -53,41 +51,7 @@ header{
     padding-inline: 10px;
     margin-top: 20px;
   }
-  
-  .banner__button {
-    border: none;
-    outline: none;
-    background-color: #f3ecec;
-    border: 2px solid #8ebbef;
-    color: #0e6fef;
-    border-radius: 8px;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 30px;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  
-  .banner__button a {
-    color: #0e4fae;
-    transition: 0.3s;
-  }
-  
-  .banner__button a:hover {
-    color: #000;
-  }
-  
-  .banner__button:hover {
-    background-color: #FFF;
-    color: #000;
-  }
-  
-  .banner__container-button {
-    display: flex;
-    justify-content: center;
-  }
-  
+}
   @media screen and (width <= 800px) {
     .banner__title {
       font-size: 35px;
@@ -97,15 +61,28 @@ header{
     .banner {
       gap: 30px;
     }
-      .banner__image img {
+      img.banner_image {
           width: 51%;
           height: auto;
       }
-  }
+      nav{
+        height: auto;
+        width: auto;
+      }
+     }
   image.carrusel{
     height: 10px;
     width: 10px;
   }
+img.Logo{
+  height: 150px;
+  width: 400px;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
   
     .banner__image {
       padding: 0;
@@ -117,3 +94,7 @@ header{
     body{
       background-color:#48ffe41a;
     }
+img.banner__image{
+  height: auto;
+  width:auto;
+}
