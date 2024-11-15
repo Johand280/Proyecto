@@ -34,11 +34,12 @@ header{
 .nav-list{
   display: flex;
   list-style-type: none;
-  gap: 1rem;
+  gap: 2rem;
 }
 .nav-list li a{
   text-decoration: none;
   color:rgb(105 32 174);
+  font-size: 14.5pt;
 }
 .enlaces{
     display: none;
@@ -64,7 +65,7 @@ header{
 }
 
 .imagen {
-  width: 570px;
+  width: 595px;
   height: 300px;
   cursor: pointer;
 }
@@ -83,14 +84,22 @@ header{
   padding: 10px;
 }
 img.Logo{
-  height: 150px;
-  width: 400px;
+  height: 90px;
+  width: 410px;
 }
 nav.dos{
  display: flex;
  align-items:initial;
  list-style-type: none;
 } 
+.banner_button{
+  background-color: rgb(105 32 174);
+    color: #fff;
+    height: 105px;
+    width: 825px;
+    align-content: center;
+    margin: 30px;
+}
     .banner_image {
       padding: 0;
     }
@@ -117,44 +126,66 @@ img.banner_image{
   .texto_banner{
   font-size: 15pt;
   }
+  .imagen {
+    width: 384px;
+    height: 200px;
+    cursor: pointer;
+  }
 .abrir_menu, .cerrar_menu {
   display: block; 
   border: 0;
-  font-size: 1.25rem;
+  font-size: 2.35rem;
   cursor: pointer;
+  background-color: transparent;
 }
+
 .nav-list{
   align-items: end;
   flex-direction: column;
-  
+  color: #fff;
 }
+.nav-list li a{
+  text-decoration: none;
+  color:rgb(248, 247, 250);
+  font-size: 14.5pt;
+}
+
 .nav{
-  opacity: 0;
+ opacity: 0;
   visibility: hidden;
 
   display: flex;
   flex-direction: column;
-  background-color: #141414;
-  bottom: 0;
+  background-color: rgb(129 43 211);
+  bottom: 0px;
   position: absolute;
   top: 0;
   right: 0;
-  box-shadow: #e0c9c954;
   gap: 1rem;
   align-items: end;
+  width: 250px;
+  transition: all .3s;
+  z-index: 1;
 }
 .nav.visible {
   opacity: 1;
   visibility: visible;
 }
-.imagen {
-  width: 300px;
-  height: 180px;
-  cursor: pointer;
+.cerrar_menu{
+  color: #fff;
+}
+.banner_button{
+  width: 250px;
+  height: 30px;
+  margin: 0;
+}
+img.Logo{
+  height: 90px;
+  width: 375px;
 }
 img.banner_image{
-  max-height: 250px;
-  max-width: 190px;
+  max-height: 260px;
+  max-width: 220px;
   height: auto;
   width: auto;
 }
