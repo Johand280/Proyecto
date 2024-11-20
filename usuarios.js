@@ -11,13 +11,13 @@ let indice = 0;
         const desplazamiento = -indice * 100;
         imagenes.style.transform = `translateX(${desplazamiento}%)`;
     }
-const nav = document.querySelector("#Nav");
-const abrir = document.querySelector("#Abrir");
-const cerrar = document.querySelector("#Cerrar");
+let nav = document.querySelectorAll("#Nav");
+let abrir = document.querySelectorAll("#Abrir");
+let Cerrar = document.querySelectorAll("#Cerrar");
 
-abrir.addEventListener("click", () => {
-    nav.classList.add(" visible");
-})
-cerrar.addEventListener("click", () => {
-    nav.classList.remove(" visible");
-})
+abrir.addeventlistener("click", () => { 
+    nav.classList.add("visible");});
+
+Cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+});
