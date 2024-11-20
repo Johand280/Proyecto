@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Artistas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    header {
+      background-color: #6A0DAD;
+      color: #ffffff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    .artist-section {
+      border: 1px solid #6A0DAD;
+      border-radius: 10px;
+      margin: 20px;
+      padding: 20px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .artist-section:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .artist-header {
+      text-align: center;
+      color: #6A0DAD;
+      margin-bottom: 10px;
+    }
+
+    .art-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .art-item {
+      border: 1px solid #6A0DAD;
+      border-radius: 8px;
+      padding: 10px;
+      width: calc(33% - 20px);
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .art-item img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .art-item h4 {
+      color: #6A0DAD;
+      margin: 10px 0;
+    }
+
+    .buy-button {
+      background-color: #6A0DAD;
+      color: #ffffff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #4B0082;
+    }
+
+    #cart {
+      background-color: #f9f9f9;
+      border: 1px solid #6A0DAD;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    #cart h2 {
+      color: #6A0DAD;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    .cart-item p {
+      margin: 0;
+    }
+
+    .clear-cart {
+      background-color: #6A0DAD;
+      color: #ffffff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .clear-cart:hover {
+      background-color: #4B0082;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #6A0DAD;
+      color: #ffffff;
+      margin-top: 20px;
+    }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #6A0DAD;
+      color: #ffffff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #4B0082;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Galería de Artistas</h1>
+  <p>Explora las obras de tus artistas favoritos y adquiérelas </p>
+</header>
+
+<div class="artist-section">
+  <h2 class="artist-header">Sofía Gómez</h2>
+  <div class="art-details">
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 1">
+      <h4>Amanecer Cálido</h4>
+      <p>Precio: $1,000,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Amanecer Cálido', 1000000)">Añadir al Carrito</button>
+    </div>
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 2">
+      <h4>Noches en Cali</h4>
+      <p>Precio: $490,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Noches en Cali', 490000)">Añadir al Carrito</button>
+    </div>
+  </div>
+</div>
+
+<div class="artist-section">
+  <h2 class="artist-header">Juan Martínez</h2>
+  <div class="art-details">
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 1">
+      <h4>Montañas Eternas</h4>
+      <p>Precio: $500,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Montañas Eternas', 500000)">Añadir al Carrito</button>
+    </div>
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 2">
+      <h4>Río Soñador</h4>
+      <p>Precio: $680,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Río Soñador', 680000)">Añadir al Carrito</button>
+    </div>
+  </div>
+</div>
+
+<div class="artist-section">
+  <h2 class="artist-header">Laura Castro</h2>
+  <div class="art-details">
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 1">
+      <h4>Reflejos Urbanos</h4>
+      <p>Precio: $950,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Reflejos Urbanos', 950000)">Añadir al Carrito</button>
+    </div>
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 2">
+      <h4>Horizonte Perdido</h4>
+      <p>Precio: $160,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Horizonte Perdido', 160000)">Añadir al Carrito</button>
+    </div>
+  </div>
+</div>
+
+<div class="artist-section">
+  <h2 class="artist-header">Andrés Velásquez</h2>
+  <div class="art-details">
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 1">
+      <h4>Selva Profunda</h4>
+      <p>Precio: $300,000 COP</p>
+      <button class="buy-button" onclick="addToCart('Selva Profunda', 300000)">Añadir al Carrito</button>
+    </div>
+    <div class="art-item">
+      <img src="https://via.placeholder.com/150" alt="Obra 2">
+      <h4>Caminos de Luz</h4>
+      <p>Precio: $250,600 COP</p>
+      <button class="buy-button" onclick="addToCart('Caminos de Luz', 250600)">Añadir al Carrito</button>
+    </div>
+  </div>
+</div>
+
+<div id="cart">
+  <h2>Carrito de Compras</h2>
+  <div id="cart-items"></div>
+  <p><strong>Total:</strong> $<span id="total-price">0</span> COP</p>
+  <button class="clear-cart" onclick="clearCart()">Vaciar Carrito</button>
+</div>
+
+<footer>
+  <p>&copy; 2024 Derechos de autor.</p>
+</footer>
+
+<button class="back-button" onclick="window.location.href='hola.html';">Volver al inicio</button>
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function updateCart() {
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+    cartItemsContainer.innerHTML = '';
+    let totalPrice = 0;
+
+    cart.forEach((item, index) => {
+      totalPrice += item.price;
+      const cartItem = document.createElement('div');
+      cartItem.className = 'cart-item';
+      cartItem.innerHTML = `
+        <p>${item.name}</p>
+        <p>$${item.price.toLocaleString()} COP</p>
+        <button onclick="removeFromCart(${index})">Eliminar</button>
+      `;
+      cartItemsContainer.appendChild(cartItem);
+    });
+
+    totalPriceElement.textContent = totalPrice.toLocaleString();
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    updateCart();
+    alert(`"${name}" añadido al carrito.`);
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+  }
+
+  function clearCart() {
+    cart = [];
+    updateCart();
+  }
+
+  updateCart();
+</script>
+
+</body>
+</html>
