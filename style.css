@@ -208,12 +208,8 @@ img.banner_image{
   z-index: 1;
   font-size: 42pt;
 }
-@keyframes mostrar {
-from{opacity: o;}
-to{opacity: 1;}
-}
 .nav.visible {
-  animation: mostrar 0.3s ;
+  opacity: 1;
   visibility: visible;
 }
 .cerrar_menu{

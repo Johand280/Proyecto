@@ -11,13 +11,13 @@ let indice = 0;
         const desplazamiento = -indice * 100;
         imagenes.style.transform = `translateX(${desplazamiento}%)`;
     }
-let nav = document.querySelectorAll("#Nav");
-let abrir = document.querySelectorAll("#Abrir");
-let Cerrar = document.querySelectorAll("#Cerrar");
+const nav = document.querySelectorAll(".nav");
+const abrir = document.querySelectorAll('.abrir_menu');
+const Cerrar = document.querySelectorAll('.cerrar_menu');
 
-abrir.addeventlistener("click", () => { 
-    nav.classList.add("visible");});
-
-Cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-});
+abrir.addeventlistener('click', ()=> {
+    nav.classlist.add('visible')
+})
+Cerrar.addeventlistener('click', ()=> {
+    nav.classlist.remove('visible')
+})
