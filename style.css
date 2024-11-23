@@ -65,9 +65,6 @@ footer{
   color:rgb(105 32 174);
   font-size: 14.5pt;
 }
-.enlaces{
-    display: none;
-}
 .container_banner{
   display: flex;
   align-items: center;
@@ -128,7 +125,7 @@ nav.dos{
 }
 .banner_button a {
   color: #e436f4;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .banner_button a:hover {
@@ -156,9 +153,6 @@ img.banner_image{
   height: 350px;
   width: 360px;
 }
-.abrir_menu, .cerrar_menu{
-  display: none;
-}
 @media screen and (width<= 660px) {
   h2{
     color: rgb(105 32 174);
@@ -172,49 +166,7 @@ img.banner_image{
     height: 200px;
     cursor: pointer;
   }
-.abrir_menu, .cerrar_menu {
-  display: block; 
-  border: 0;
-  font-size: 2.35rem;
-  cursor: pointer;
-  background-color: transparent;
-}
 
-.nav-list{
-  align-items: end;
-  flex-direction: column;
-  color: #fff;
-}
-.nav-list li a{
-  text-decoration: none;
-  color:rgb(248, 247, 250);
-  font-size: 17.5pt;
-}
-
-.nav{
- opacity: 0;
-  visibility: hidden;
-
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(129 43 211);
-  bottom: 0px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  gap: 1rem;
-  align-items: end;
-  width: 250px;
-  z-index: 1;
-  font-size: 42pt;
-}
-.nav.visible {
-  opacity: 1;
-  visibility: visible;
-}
-.cerrar_menu{
-  color: #fff;
-}
 .banner_button{
   width: 250px;
   height: 30px;
@@ -222,7 +174,7 @@ img.banner_image{
 }
 img.Logo{
   height: 62px;
-  width: 276px;
+  width: 200px;
 }
 img.banner_image{
   max-height: 217px;

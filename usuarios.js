@@ -11,13 +11,3 @@ let indice = 0;
         const desplazamiento = -indice * 100;
         imagenes.style.transform = `translateX(${desplazamiento}%)`;
     }
-const nav = document.querySelectorAll(".nav");
-const abrir = document.querySelectorAll('.abrir_menu');
-const Cerrar = document.querySelectorAll('.cerrar_menu');
-
-abrir.addeventlistener('click', ()=> {
-    nav.classlist.add('visible')
-})
-Cerrar.addeventlistener('click', ()=> {
-    nav.classlist.remove('visible')
-})
