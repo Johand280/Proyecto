@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galería de Artistas</title>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,12 +14,26 @@
       color: #000000;
     }
 
-    header {
-      background-color: #6A0DAD;
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem 0;
-    }
+    header{
+    background-color:#f477ff94;
+    color:rgb(105 32 174);
+   font-style:inherit;
+   display: flex;
+   align-items:center;
+   justify-content:space-between;
+   margin: 0px;
+   padding: 10px;
+  }
+  .nav-list{
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+.nav-list li a{
+  text-decoration: none;
+  color:rgb(105 32 174);
+  font-size: 14.5pt;
+}
 
     .artist-section {
       border: 1px solid #6A0DAD;
@@ -124,6 +139,46 @@
       color: #ffffff;
       margin-top: 20px;
     }
+    img.Logo{
+  height: 65px;
+  width: 375px;
+}
+nav.dos{
+ display: flex;
+ align-items:initial;
+ list-style-type: none;
+} 
+.banner_button{
+  background-color: rgb(105 32 174);
+    color: #fff;
+    height: 105px;
+    width: 825px;
+    align-content: center;
+    margin: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.banner_button a {
+  color: #e436f4;
+  transition: 0.3s;
+}
+
+.banner_button a:hover {
+  color: #000;
+}
+
+.banner_button:hover {
+  background-color: #ed4df0;
+  color: #29091fdf;
+}
+
+    .banner_image {
+      padding: 0;
+    }
+    
+    .banner_subtitle {
+      width: 100%;
+    }
 
     .back-button {
       position: fixed;
@@ -141,83 +196,162 @@
     .back-button:hover {
       background-color: #4B0082;
     }
+    img.banner_image{
+  height: 350px;
+  width: 360px;
+}
+.abrir_menu, .cerrar_menu{
+  display: none;
+}
+@media screen and (width<= 660px) {
+  h2{
+    color: rgb(105 32 174);
+    font-size: 20pt;
+  }
+  .texto_banner{
+  font-size: 13.5pt;
+  }
+  .imagen {
+    width: 384px;
+    height: 200px;
+    cursor: pointer;
+  }
+.abrir_menu, .cerrar_menu {
+  display: block; 
+  border: 0;
+  font-size: 2.35rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.nav-list{
+  align-items: end;
+  flex-direction: column;
+  color: #fff;
+}
+.nav-list li a{
+  text-decoration: none;
+  color:rgb(248, 247, 250);
+  font-size: 17.5pt;
+}
+
+.nav{
+ opacity: 0;
+  visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(129 43 211);
+  bottom: 0px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  gap: 1rem;
+  align-items: end;
+  width: 250px;
+  z-index: 1;
+  font-size: 42pt;
+}
+@keyframes mostrar {
+from{opacity: o;}
+to{opacity: 1;}
+}
+.nav.visible {
+  animation: mostrar 0.3s ;
+  visibility: visible;
+}
+.cerrar_menu{
+  color: #fff;
+}
+.banner_button{
+  width: 250px;
+  height: 30px;
+  margin: 0;
+}
+img.Logo{
+  height: 62px;
+  width: 276px;
+}
+img.banner_image{
+  max-height: 217px;
+  max-width: 220px;
+  height: auto;
+  width: auto;
+}
+}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Galería de Artistas</h1>
-  <p>Explora las obras de tus artistas favoritos y adquiérelas </p>
+  <button class="inicio"><a href="hola.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+    <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+  </svg></a></button>
+  <img class="Logo" src="Tarea/Drawing Thoughts.png" alt="">
+<button class="abrir_menu" id="Abrir"><i class="bi bi-list"></i></button>
+<nav class="nav" id="Nav">
+    <button class="cerrar_menu" id="Cerrar"><i class="bi bi-x-square"></i></button>
+    <ul class="nav-list">
+        <li><a href="Galeria.html">Artistas</a></li>
+        <li><a href="acercade.html">Mas informacion</a></li>
+            <button class="Registro">
+              <a href="Inicio de sesión.html">Iniciar sesion/</a>
+              <a href="Registro.html">Registrarse</a>
+            </button>
+    </ul>
+</nav>
 </header>
 
 <div class="artist-section">
-  <h2 class="artist-header">Sofía Gómez</h2>
+  <h2 class="artist-header">Herbert James Draper</h2>
   <div class="art-details">
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 1">
-      <h4>Amanecer Cálido</h4>
+      <img src="Tarea/1280px-Herbert_James_Draper_-_Halcyone_(1915).jpg" alt="Obra 1" style="width: 350px; height: auto;">
+      <h4>Halcyone</h4>
       <p>Precio: $1,000,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Amanecer Cálido', 1000000)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('Halcyone', 1000000)">Añadir al Carrito</button>
     </div>
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 2">
-      <h4>Noches en Cali</h4>
+      <img src="Tarea/descarga.jpeg" alt="Obra 2" style="width: 300px; height: auto;">
+      <h4>Ulysses and the sirens</h4>
       <p>Precio: $490,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Noches en Cali', 490000)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('Ulysses and the sirens', 490000)">Añadir al Carrito</button>
     </div>
   </div>
 </div>
 
 <div class="artist-section">
-  <h2 class="artist-header">Juan Martínez</h2>
+  <h2 class="artist-header">Frederic Soulacroix</h2>
   <div class="art-details">
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 1">
-      <h4>Montañas Eternas</h4>
+      <img src="Tarea/soulacroix3.jpg" alt="Obra 1" style="width: 280px; height: auto;">
+      <h4>La coqueta</h4>
       <p>Precio: $500,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Montañas Eternas', 500000)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('La coqueta', 500000)">Añadir al Carrito</button>
     </div>
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 2">
-      <h4>Río Soñador</h4>
+      <img src="Tarea/images.jpeg" alt="Obra 2" style="width: 300px; height: auto;">
+      <h4>Flirteo</h4>
       <p>Precio: $680,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Río Soñador', 680000)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('Flirteo', 680000)">Añadir al Carrito</button>
     </div>
   </div>
 </div>
 
 <div class="artist-section">
-  <h2 class="artist-header">Laura Castro</h2>
+  <h2 class="artist-header">Auguste Toulmouche</h2>
   <div class="art-details">
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 1">
-      <h4>Reflejos Urbanos</h4>
+      <img src="Tarea/Auguste_toulmouche-consolation.jpeg" alt="Obra 1" style="width: 300px; height: auto;">
+      <h4>Consuelo</h4>
       <p>Precio: $950,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Reflejos Urbanos', 950000)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('Consuelo', 950000)">Añadir al Carrito</button>
     </div>
     <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 2">
-      <h4>Horizonte Perdido</h4>
+      <img src="Tarea/toulmouche3.jpg" alt="Obra 2" style="width: 500px; height: auto;">
+      <h4>La novia reacia</h4>
       <p>Precio: $160,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Horizonte Perdido', 160000)">Añadir al Carrito</button>
-    </div>
-  </div>
-</div>
-
-<div class="artist-section">
-  <h2 class="artist-header">Andrés Velásquez</h2>
-  <div class="art-details">
-    <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 1">
-      <h4>Selva Profunda</h4>
-      <p>Precio: $300,000 COP</p>
-      <button class="buy-button" onclick="addToCart('Selva Profunda', 300000)">Añadir al Carrito</button>
-    </div>
-    <div class="art-item">
-      <img src="https://via.placeholder.com/150" alt="Obra 2">
-      <h4>Caminos de Luz</h4>
-      <p>Precio: $250,600 COP</p>
-      <button class="buy-button" onclick="addToCart('Caminos de Luz', 250600)">Añadir al Carrito</button>
+      <button class="buy-button" onclick="addToCart('La novia reacia', 160000)">Añadir al Carrito</button>
     </div>
   </div>
 </div>
@@ -233,7 +367,6 @@
   <p>&copy; 2024 Derechos de autor.</p>
 </footer>
 
-<button class="back-button" onclick="window.location.href='hola.html';">Volver al inicio</button>
 <script>
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
